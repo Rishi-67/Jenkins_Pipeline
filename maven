@@ -10,7 +10,9 @@ pipeline{
         stage('Build'){
 
             steps{
-                git ''
+                git 'https://github.com/Rishi-67/Jenkins_Pipeline.git'
+
+                bat 'mvn clean test package'
             }
         }
     }
